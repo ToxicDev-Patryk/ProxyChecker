@@ -1,0 +1,8 @@
+{
+    "Threads": 16,
+    "ProxyType": "socks5",
+    "InputFile": "proxies.txt",
+    "OutputFile": "Checked_Proxies.txt",
+    "MaxTimeout": 1000,
+    "Hosts": ["example.com", "google.com", "github.com"]
+}
