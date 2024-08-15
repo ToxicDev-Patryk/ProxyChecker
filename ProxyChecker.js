@@ -66,8 +66,8 @@ async function checkProxy(proxy, proxyType, maxTimeout) {
         } else {
             const targetHost = getRandomHost();
             const options = {
-                host,
-                port,
+                host: targetHost,
+                port: proxyType === 'http' ? 80 : 443,
                 method: 'GET',
                 timeout: maxTimeout,
                 path: '/',
@@ -79,7 +79,12 @@ async function checkProxy(proxy, proxyType, maxTimeout) {
 
             let agent;
             if (proxyType === 'http' || proxyType === 'https') {
-                agent = new SocksProxyAgent(`${proxyType}://${proxy}`);
+                agent = new (proxyType === 'http' ? http.Agent : https.Agent)({
+                    proxy: {
+                        host,
+                        port
+                    }
+                });
             }
 
             const request = (proxyType === 'https' ? https : http).request({ ...options, agent }, (res) => {

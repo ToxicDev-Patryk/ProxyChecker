@@ -1,6 +1,6 @@
 {
     "Threads": 16,
-    "ProxyType": "socks5",
+    "ProxyType": "http",
     "InputFile": "proxies.txt",
     "OutputFile": "Checked_Proxies.txt",
     "MaxTimeout": 1000,
