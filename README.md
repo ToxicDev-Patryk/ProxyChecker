@@ -1,6 +1,13 @@
 # ProxyChecker
 Simple Proxy Checker made in Node.js with implemented MultiThreading and Support for Socks4/Socks5/Http Proxies!
 
+## How to Setup
+
+- Download ProxyChecker
+- Run this command: `npm install` or `npm i` in dir where ProxyChecker and package is located
+- Change config.json
+- Run this command: `node ProxyChecker.js`
+
 ## Features
 
 - Multi-Protocol Support: The proxy checker supports various proxy types, including SOCKS4, SOCKS5, HTTP, and HTTPS, ensuring comprehensive testing capabilities.
