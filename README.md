@@ -1,6 +1,8 @@
 # ProxyChecker
 Simple Proxy Checker made in Node.js with implemented MultiThreading and Support for Socks4/Socks5/Http Proxies!
 
+`It's pretty fast too! i checked 30k http proxies in like 10 mins`
+
 ## How to Setup
 
 - Download ProxyChecker
